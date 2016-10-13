@@ -2,12 +2,24 @@
 
 window.onload = function()
 {
-	document.getElementById("boundary1").addEventListener("mouseover",borderHover);
+	var bound = document.querySelectorAll(".boundary");
+	
+	for (i = 0;i < bound.length;i++)
+		{
+			bound[i].addEventListener("mouseover",allborders);
+		}
 }
 
 
 
-function borderHover()
+//Turn all borders red once hovered over
+
+function allborders()
 {
-	document.getElementById("boundary1").className = " boundary youlose";
+	var bound = document.querySelectorAll(".boundary");
+	
+
+	for (i = 0;i < bound.length;i++)
+	{
+	}
 }
