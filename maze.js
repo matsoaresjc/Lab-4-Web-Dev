@@ -3,8 +3,9 @@
 window.onload = function()
 {
 	var flag = false; // Flag to control whether a wall has been hit.
+	//var clicked = false; // Flag to control wheter the start button has ben clicked.
 	var bound = document.querySelectorAll(".boundary");
-	
+
 	document.getElementById("start").addEventListener("mouseover",start);
 	document.getElementById("end").addEventListener("mouseover",end);
 	for (i = 0;i < bound.length;i++)
@@ -19,6 +20,7 @@ window.onload = function()
 
 function allborders()
 {
+	flag = true;
 	var bound = document.querySelectorAll(".boundary");
 	
 
@@ -26,12 +28,13 @@ function allborders()
 	{
 			bound[i].className ="boundary youlose";
 	}
+
 }
 
 
 function start()
 {
-
+flag = false;
 var bound = document.querySelectorAll(".boundary");
 
 for (i = 0;i < bound.length;i++)
@@ -44,14 +47,15 @@ for (i = 0;i < bound.length;i++)
 
 function end()
 {
-	flag = true;
 	
 	if(flag)
 	{
-		alert("You win!");
+		alert("Sorry,you lost.");
 	} else{
-		alert("Sorry you lost");
+		alert("You win!");
 	}
 
 
 }
+
+
