@@ -9,7 +9,7 @@ window.onload = function()
 	document.getElementById("start").addEventListener("click",restart);
 	document.getElementById("start").addEventListener("mouseover",start);
 	document.getElementById("end").addEventListener("mouseover",end);
-	
+
 	for (i = 0;i < bound.length;i++)
 		{
 			bound[i].addEventListener("mouseover",allborders);
@@ -53,9 +53,9 @@ function end()
 	
 	if(flag)
 	{
-		alert("Sorry,you lost.");
+		document.getElementById("status").textContent = "Sorry, you lost";
 	} else{
-		alert("You win!");
+		document.getElementById("status").textContent = "You win!";
 	}
 
 
