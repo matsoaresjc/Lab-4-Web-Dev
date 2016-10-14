@@ -14,6 +14,10 @@ window.onload = function()
 		{
 			bound[i].addEventListener("mouseover",allborders);
 		}
+
+		//Dimensions
+
+		
 }
 
 
@@ -24,7 +28,7 @@ function allborders()
 {
 	flag = true;
 	var bound = document.querySelectorAll(".boundary");
-	
+	document.getElementById("status").textContent = "Sorry, you lost.";
 
 	for (i = 0;i < bound.length;i++)
 	{
@@ -53,7 +57,7 @@ function end()
 	
 	if(flag)
 	{
-		document.getElementById("status").textContent = "Sorry, you lost";
+		document.getElementById("status").textContent = "Sorry, you lost.";
 	} else{
 		document.getElementById("status").textContent = "You win!";
 	}
